@@ -20,6 +20,17 @@ public class Project {
     @JoinColumn(name = "user_id")
     private User user;
 
+    @Column(name = "description")
+    private Long description;
+
+    public Long getDescription() {
+        return description;
+    }
+
+    public void setDescription(Long description) {
+        this.description = description;
+    }
+
     public User getUser() {
         return user;
     }
