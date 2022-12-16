@@ -1,4 +1,4 @@
-drop database m246;
+drop database if exists m246;
 
 Create database if not exists m246;
 

@@ -21,6 +21,17 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    /**
+     *
+     * @Insomnia: POST http://127.0.0.1:8080/user/signup
+     *        {
+     * 			"name": "Bob",
+     * 			"username": "xXbob69Xx",
+     * 		  "email": "bob@bob.ch",
+     * 		  "password": "secretbob"
+     *    }
+     *    @return: "User registered successfully"
+     */
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@RequestBody SignUpDto signUpDto) {
         User user = new User();
