@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import wiss.agile426.sprint01.model.User;
 import wiss.agile426.sprint01.repository.UserRepository;
+import wiss.agile426.sprint01.security.SignUpDto;
 
 
 /**

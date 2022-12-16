@@ -2,8 +2,13 @@ package wiss.agile426.sprint01.model;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
-@Table(name = "user")
+@Table(name = "users", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"username"}),
+        @UniqueConstraint(columnNames = {"email"})
+})
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +28,13 @@ public class User {
 
     @Column(name = "password", nullable = false, length = 64)
     private String password;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+    private Set<Role> roles;
+
 
     public String getPassword() {
         return password;
@@ -64,4 +76,8 @@ public class User {
         this.id = id;
     }
 
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
 }

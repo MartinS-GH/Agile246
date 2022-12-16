@@ -1,4 +1,4 @@
-package wiss.agile426.sprint01.controller;
+package wiss.agile426.sprint01.security;
 
 public class SignUpDto {
     private String name;
