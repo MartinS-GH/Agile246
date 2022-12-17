@@ -81,4 +81,7 @@ public class User {
     public Set<Role> getRoles() {
         return roles;
     }
+
+    public void setRoles(Set<Role> singleton) {
+    }
 }
