@@ -30,6 +30,8 @@ public class User {
     @JoinColumn(name = "role_id", nullable = false)
     private UserRole role;
 
+
+
     //SETTER
     public void setId(Integer id) {
         this.id = id;
@@ -51,7 +53,7 @@ public class User {
     }
 
 
-//GETTER
+    //GETTER
     public String getEmail() {
     return eMail;
 }
