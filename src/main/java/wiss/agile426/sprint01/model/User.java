@@ -2,13 +2,15 @@ package wiss.agile426.sprint01.model;
 
 import jakarta.persistence.*;
 
+import javax.management.relation.Role;
+
 @Entity
 @Table(name = "user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Integer id;
+    private int id;
 
     @Column(name = "name", length = 24)
     private String name;
@@ -24,44 +26,48 @@ public class User {
     @Column(name = "password", nullable = false, length = 64)
     private String password;
 
-    public String getPassword() {
-        return password;
-    }
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "role_id", nullable = false)
+    private UserRole role;
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return eMail;
-    }
-
-    public void setEmail(String eMail) {
-        this.eMail = eMail;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
+    //SETTER
     public void setId(Integer id) {
         this.id = id;
     }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    public void setEmail(String eMail) {
+        this.eMail = eMail;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setRole(UserRole role){
+        this.role = role;
+    }
 
+
+//GETTER
+    public String getEmail() {
+    return eMail;
+}
+    public String getUsername() {
+        return username;
+    }
+    public Integer getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public UserRole getRole(){
+        return role;
+    }
 }
