@@ -3,6 +3,7 @@ package wiss.agile426.sprint01.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import wiss.agile426.sprint01.model.SignUpDto;
 import wiss.agile426.sprint01.model.User;
 import wiss.agile426.sprint01.repository.UserRepository;
 
@@ -55,6 +56,7 @@ public class UserController {
         user.setUsername(signUpDto.getUsername());
         user.setEmail(signUpDto.getEmail());
         user.setPassword(signUpDto.getPassword());
+        user.setRole(signUpDto.getRole());
         userRepository.save(user);
         return ResponseEntity.ok("User registered successfully");
     }
