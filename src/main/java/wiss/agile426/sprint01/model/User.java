@@ -1,7 +1,8 @@
 package wiss.agile426.sprint01.model;
 
-import jakarta.persistence.*;
 
+import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -23,7 +24,7 @@ public class User {
 
 
     @Column(name = "email", unique = true, length = 55)
-    private String eMail;
+    private String email;
 
 
     @Column(name = "password", nullable = false, length = 64)
@@ -33,7 +34,7 @@ public class User {
     @JoinTable(name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
-    private Set<Role> roles;
+    private Set<Role> roles = new HashSet<>();
 
 
     public String getPassword() {
@@ -45,11 +46,11 @@ public class User {
     }
 
     public String getEmail() {
-        return eMail;
+        return email;
     }
 
     public void setEmail(String eMail) {
-        this.eMail = eMail;
+        this.email = eMail;
     }
 
     public String getName() {

@@ -1,6 +1,6 @@
 package wiss.agile426.sprint01.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.sql.Date;
 

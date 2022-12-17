@@ -1,12 +1,12 @@
 package wiss.agile426.sprint01.controller;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import wiss.agile426.sprint01.model.User;
 import wiss.agile426.sprint01.repository.UserRepository;
 import wiss.agile426.sprint01.security.SignUpDto;
-
 
 /**
  * TODO: Login + Authenticator (add dependency to pom.xml)
@@ -43,13 +43,13 @@ public class UserController {
                     .body("Error: Username is already taken!");
         }
 
-        /* why dis not work? :(
+
         if (userRepository.existsByEmail(signUpDto.getEmail())) {
             return ResponseEntity
                     .badRequest()
                     .body("Error: Email is already in use!");
         }
-    */
+
 
         User user = new User();
         user.setName(signUpDto.getName());
