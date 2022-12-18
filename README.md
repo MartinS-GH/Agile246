@@ -28,7 +28,7 @@ POST: http://127.0.0.1:8080/api/auth/signup
 POST: http://127.0.0.1:8080/api/auth/signin
 ```
 {
-        "username": "xXbob69Xx",
+        "usernameOrEmail": "xXbob69Xx",
         "password": "secretbob"
 }
 ```
