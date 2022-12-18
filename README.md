@@ -14,16 +14,26 @@ use agile426;
 Insomnia:
 
 POST: http://127.0.0.1:8080/api/auth/signup
+
 {
+
   			"name": "Bob Bobison",
+        
   			"username": "xXbob69Xx",
+        
   		  "email": "b123ob@bob.ch",
+        
   		  "password": "secretbob"
+        
 }
 
 
 POST: http://127.0.0.1:8080/api/auth/signin
+
 {
+
   			"username": "xXbob69Xx",
+        
   		  "password": "secretbob"
+        
 }
