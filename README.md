@@ -4,9 +4,10 @@ A School Project in Module 426 (Developing softawre with agile methods). Our Pro
 
 **MYSQL:**
 ```
-drop database if exists agile426;
-Create database if not exists agile426;
-use agile426;
+DROP DATABASE agile426;
+CREATE DATABASE agile426;
+USE agile426;
+INSERT INTO ROLE (role) VALUES ("ROLE_ADMIN");
 ```
 
 **Insomnia:**
