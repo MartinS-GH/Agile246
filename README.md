@@ -32,3 +32,12 @@ POST: http://127.0.0.1:8080/api/auth/signin
         "password": "secretbob"
 }
 ```
+
+POST: http://127.0.0.1:8080/api/project/
+```
+{
+        "date":"2022-01-01",
+        "description":"Test Description",
+        "status":"ACTIVE"
+}
+```
