@@ -9,7 +9,7 @@ CREATE DATABASE agile426;
 USE agile426;
 
 /* AFTER STARTING MVN: */
-INSERT INTO ROLE (role) VALUES ("ROLE_ADMIN");
+INSERT INTO roles (name) VALUES ("ROLE_ADMIN");
 ```
 
 **Insomnia:**
