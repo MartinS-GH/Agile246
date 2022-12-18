@@ -5,7 +5,9 @@ A School Project in Module 426 (Developing softawre with agile methods). Our Pro
 MYSQL:
 
 drop database if exists agile426;
+
 Create database if not exists agile426;
+
 use agile426;
 
 
