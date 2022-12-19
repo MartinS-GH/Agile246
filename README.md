@@ -35,8 +35,9 @@ POST: http://127.0.0.1:8080/api/auth/signin
 ```
 
 http://127.0.0.1:8080/api/auth/logout
-
--> No Body
+```
+        No Body
+```
 
 POST: http://127.0.0.1:8080/api/project/
 ```
