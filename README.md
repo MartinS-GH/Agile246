@@ -6,9 +6,10 @@ A School Project in Module 426 (Developing softawre with agile methods). Our Pro
 ```
 DROP DATABASE agile426;
 CREATE DATABASE agile426;
-USE agile426;
-
+```
 /* AFTER STARTING MVN: */
+```
+USE agile426;
 INSERT INTO roles (name) VALUES ("ROLE_ADMIN");
 ```
 
