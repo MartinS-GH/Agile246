@@ -7,7 +7,7 @@ A School Project in Module 426 (Developing softawre with agile methods). Our Pro
 DROP DATABASE agile426;
 CREATE DATABASE agile426;
 ```
-/* AFTER STARTING MVN: */
+AFTER STARTING MVN:
 ```
 USE agile426;
 INSERT INTO roles (name) VALUES ("ROLE_ADMIN");
@@ -33,6 +33,10 @@ POST: http://127.0.0.1:8080/api/auth/signin
         "password": "secretbob"
 }
 ```
+
+http://127.0.0.1:8080/api/auth/logout
+
+-> No Body
 
 POST: http://127.0.0.1:8080/api/project/
 ```
